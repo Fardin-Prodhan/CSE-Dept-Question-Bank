@@ -1,23 +1,36 @@
-```
-# With The Name Of Almighty Allah <br> 
-# CSE-Dept-Question-Bank
-Test version of CSE Department Question Bank
-```
+# With The Name Of Almighty
+
+Welcome to the **HUB Question Bank Department of CSE**.
+
+The question bank is now hosted on GitHub to provide a centralized, organized, and easily accessible collection of previous examination question papers for all students of Computer Science and Engineering, Hamdard University Bangladesh.
+
+---
+
 # Repository Structure
 
 All question papers are organized **semester-wise** for easy navigation.
 
 ```
-HUB_Question_Bank
+Department-Question-Bank/
 │
-├── Semester 1
-├── Semester 2
-├── Semester 3
-├── Semester 4
-├── Semester 5
-├── Semester 6
-├── Semester 7
-└── Semester 8
+├── questionbank.html
+├── questionbank.css
+├── questionbank.js
+│
+├── viewer.html
+├── viewer.css
+├── viewer.js
+│
+├── cse-logo.png
+│
+├── Semester_01/
+├── Semester_02/
+├── Semester_03/
+├── Semester_04/
+├── Semester_05/
+├── Semester_06/
+├── Semester_07/
+└── Semester_08/
 ```
 
 Each semester folder contains the available PDF question papers for the corresponding courses.
