@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-08-25",
+  "semesters": [
+    {
+      "name": "Semester_01",
+      "files": []
+    },
+    {
+      "name": "Semester_02",
+      "files": []
+    },
+    {
+      "name": "Semester_03",
+      "files": []
+    },
+    {
+      "name": "Semester_04",
+      "files": []
+    },
+    {
+      "name": "Semester_05",
+      "files": []
+    },
+    {
+      "name": "Semester_06",
+      "files": []
+    },
+    {
+      "name": "Semester_07",
+      "files": []
+    },
+    {
+      "name": "Semester_08",
+      "files": []
+    }
+  ]
+}

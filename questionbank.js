@@ -1,5 +1,5 @@
-  const OWNER = "siamrana2321";
-  const REPO = "HUB_Question_Bank";
+  const OWNER = "Fardin-Prodhan";
+  const REPO = "CSE-Dept-Question-Bank";
   const BRANCH = "main";
 
   const API_ROOT = `https://api.github.com/repos/${OWNER}/${REPO}/contents`;

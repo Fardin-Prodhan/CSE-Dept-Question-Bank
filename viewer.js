@@ -59,7 +59,7 @@
 
   function goHome() {
 
-    window.location.href = "questionbank.html";
+    window.location.href = "index.html";
 
   }
 
