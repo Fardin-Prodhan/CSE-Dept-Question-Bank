@@ -2,7 +2,6 @@
   const REPO = "CSE-Dept-Question-Bank";
   const BRANCH = "main";
 
-  const API_ROOT = `https://api.github.com/repos/${OWNER}/${REPO}/contents`;
   const RAW_ROOT = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}`;
 
   const app = document.getElementById("app");
@@ -37,37 +36,30 @@
     }
   }
 
-  async function githubContents(path = "") {
-    const formattedPath = path ? `/${path}` : "";
-    const response = await fetch(`${API_ROOT}${formattedPath}`, {
-      headers: {
-        "Accept": "application/vnd.github+json"
-      }
-    });
+async function loadQuestionBankJSON() {
+  const response = await fetch("questionbank.json");
 
-    if (!response.ok) {
-      throw new Error(`GitHub API error: ${response.status}`);
-    }
-
-    return response.json();
+  if (!response.ok) {
+    throw new Error("questionbank.json load failed");
   }
+
+  const data = await response.json();
+  return data.semesters || [];
+}
 
   async function loadSemesters() {
     setStatus("Loading question bank...");
 
     try {
-      const items = await githubContents("");
+      const items = await loadQuestionBankJSON();
 
       semesters = items
-        .filter(item =>
-          item.type === "dir" &&
-          /^Semester_\d+$/i.test(item.name)
-        )
+        .filter(item => /^Semester_\d+$/i.test(item.name))
         .sort((a, b) => {
           const na = parseInt(a.name.match(/\d+/)[0]);
           const nb = parseInt(b.name.match(/\d+/)[0]);
           return na - nb;
-        });
+      });
 
       renderSemesters(semesters);
 
@@ -126,58 +118,53 @@
     `;
   }
 
-  async function openSemester(encodedName) {
-    const semesterName = decodeURIComponent(encodedName);
-    currentSemesterName = semesterName;
+async function openSemester(encodedName) {
+  const semesterName = decodeURIComponent(encodedName);
+  currentSemesterName = semesterName;
 
-    setStatus("Loading question papers...");
-    app.innerHTML = "";
+  setStatus("Loading question papers...");
+  app.innerHTML = "";
 
-    try {
-      const items = await githubContents(semesterName);
-      const pdfs = [];
+  try {
+    const semester = semesters.find(
+      item => item.name === semesterName
+    );
 
-      async function collectPDFs(path) {
-        const data = await githubContents(path);
-        for (const item of data) {
-          if (item.type === "file" && /\.pdf$/i.test(item.name)) {
-            pdfs.push({
-              name: item.name,
-              path: item.path
-            });
-          } else if (item.type === "dir") {
-            await collectPDFs(item.path);
-          }
-        }
-      }
-
-      for (const item of items) {
-        if (item.type === "file" && /\.pdf$/i.test(item.name)) {
-          pdfs.push({
-            name: item.name,
-            path: item.path
-          });
-        } else if (item.type === "dir") {
-          await collectPDFs(item.path);
-        }
-      }
-
-      pdfs.sort((a, b) => a.name.localeCompare(b.name));
-      currentSemesterPDFs = pdfs;
-
-      renderFiles(semesterName, pdfs);
-    } catch (error) {
-      setStatus("");
-      app.innerHTML = `
-        <button class="back" onclick="goHome()"><i class="fa-solid fa-door-open"></i>👈 Back to Semesters</button>
-        <div class="empty">
-          <span class="empty-icon">⚠️</span>
-          Unable to load question papers for this semester.
-        </div>
-      `;
-      console.error(error);
+    if (!semester) {
+      throw new Error("Semester not found in questionbank.json");
     }
+
+    const pdfs = (semester.files || [])
+      .filter(file => /\.pdf$/i.test(file.name))
+      .map(file => ({
+        name: file.name,
+        path: file.path
+      }));
+
+    pdfs.sort((a, b) => a.name.localeCompare(b.name));
+
+    currentSemesterPDFs = pdfs;
+
+    renderFiles(semesterName, pdfs);
+
+  } catch (error) {
+    setStatus("");
+
+    app.innerHTML = `
+      <button class="back" onclick="goHome()">
+        <i class="fa-solid fa-door-open"></i>
+        👈 Back to Semesters
+      </button>
+
+      <div class="empty">
+        <span class="empty-icon">⚠️</span>
+        Unable to load question papers for this semester.
+      </div>
+    `;
+
+    console.error(error);
   }
+}
 
   function renderFiles(semesterName, pdfs) {
     setStatus("");
@@ -272,4 +259,4 @@
     }
   });
 
-  loadSemesters();
+loadSemesters();
