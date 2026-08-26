@@ -1,64 +1,83 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
 
-  <meta name="theme-color"
-        content="#0d1117">
+  <meta name="theme-color" content="#0d1117">
 
   <title>Question Paper Viewer</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
 
-  <!-- PDF.js -->
-   <link rel="stylesheet" href="viewer.css">
-   <script type="module" src="viewer.js" defer></script>
-  
+  <link rel="stylesheet" href="viewer.css">
 
- 
-
+  <script
+    type="module"
+    src="viewer.js"
+    defer
+  ></script>
 </head>
-
 
 <body>
 
+  <header class="viewer-header">
 
-<header class="viewer-header">
+    <div
+      id="viewer-title"
+      class="viewer-title"
+    >
+      Question Paper
+    </div>
 
-  <div id="viewer-title"
-       class="viewer-title">
-    Question Paper
-  </div>
+    <button
+      id="backBtn"
+      class="back-btn"
+      type="button"
+    >
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Back</span>
+    </button>
 
- <button
-  class="back-btn"
-  onclick="goHome()">
-
-  <i class="fa-solid fa-door-open"></i>👈Back
-
-</button>
-
-</header>
+  </header>
 
 
-<div id="pdf-container">
+  <main id="pdf-container">
 
-  <div id="loading"
-       class="loading">
+    <div
+      id="loading"
+      class="loading"
+    >
 
-    <div class="spinner"></div>
+      <div class="spinner"></div>
 
-    Loading question paper...
+      <div class="loading-title">
+        Loading question paper...
+      </div>
 
-  </div>
+      <div class="loading-subtitle">
+        Please wait
+      </div>
 
-</div>
+    </div>
 
+  </main>
+
+
+  <noscript>
+    <div class="error">
+      JavaScript is required to view this question paper.
+    </div>
+  </noscript>
 
 </body>
 
