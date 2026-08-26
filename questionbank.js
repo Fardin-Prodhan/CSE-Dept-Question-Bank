@@ -258,5 +258,5 @@ async function openSemester(encodedName) {
       renderSemesters(filtered);
     }
   });
-
+  
 loadSemesters();
