@@ -1,0 +1,86 @@
+[33mf1aafc1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Resolve merge conflict
+[33m9bb7b06[m Add question bank PDFs
+ .vscode/settings.json                              |   3 [32m++[m
+ CSE.png                                            | Bin [31m311518[m -> [32m255628[m bytes
+ Semester_01/Batch-25th_Fall-2023_Mid_&_Final.pdf   | Bin [31m0[m -> [32m2576824[m bytes
+ Semester_01/Batch-26th_Spring-2024_Final.pdf       | Bin [31m0[m -> [32m3148012[m bytes
+ Semester_01/Batch-26th_Spring-2024_Mid.pdf         | Bin [31m0[m -> [32m2729513[m bytes
+ Semester_01/Batch-27th_Fall-2024_Final.pdf         | Bin [31m0[m -> [32m9517257[m bytes
+ Semester_01/Batch-27th_Fall-2024_Mid.pdf           | Bin [31m0[m -> [32m3414689[m bytes
+ Semester_01/Batch-28th_Spring-2025_Final.pdf       | Bin [31m0[m -> [32m25567188[m bytes
+ Semester_01/Batch-28th_Spring-2025_Mid.pdf         | Bin [31m0[m -> [32m14530530[m bytes
+ Semester_01/Batch-29th_Fall-2025_Final.pdf         | Bin [31m0[m -> [32m5546114[m bytes
+ Semester_01/Batch-29th_Fall-2025_Mid.pdf           | Bin [31m0[m -> [32m4976307[m bytes
+ Semester_01/Batch-30th_Spring-2026_Mid.pdf         | Bin [31m0[m -> [32m11178537[m bytes
+ Semester_02/Batch-23rd_Spring-2023_Mid_&_Final.pdf | Bin [31m0[m -> [32m1737825[m bytes
+ Semester_02/Batch-24th_Fall-2023_Mid_&_Final.pdf   | Bin [31m0[m -> [32m4051441[m bytes
+ Semester_02/Batch-25th_Spring-2024_Mid_&_Final.pdf | Bin [31m0[m -> [32m7679717[m bytes
+ Semester_02/Batch-26_Fall-2024_Final.pdf           | Bin [31m0[m -> [32m3469889[m bytes
+ Semester_02/Batch-26th_Fall-2024_Mid.pdf           | Bin [31m0[m -> [32m2552960[m bytes
+ Semester_02/Batch-27th_Spring-2025_Final.pdf       | Bin [31m0[m -> [32m18925952[m bytes
+ Semester_02/Batch-27th_Spring-2025_Mid.pdf         | Bin [31m0[m -> [32m10674967[m bytes
+ Semester_02/Batch-28th_Fall-2025_Final.pdf         | Bin [31m0[m -> [32m9611309[m bytes
+ Semester_02/Batch-28th_Fall-2025_Mid.pdf           | Bin [31m0[m -> [32m14034598[m bytes
+ Semester_02/Batch-29th_Spring-2026_Mid.pdf         | Bin [31m0[m -> [32m10286108[m bytes
+ Semester_03/Batch-23rd_Fall-2023_Mid_&_Final.pdf   | Bin [31m0[m -> [32m1590328[m bytes
+ Semester_03/Batch-24th_Spring-2024_Mid_&_Final.pdf | Bin [31m0[m -> [32m3515301[m bytes
+ Semester_03/Batch-25th_Fall-2024_Final.pdf         | Bin [31m0[m -> [32m3612903[m bytes
+ Semester_03/Batch-25th_Fall-2024_Mid.pdf           | Bin [31m0[m -> [32m7123416[m bytes
+ Semester_03/Batch-26th_Spring-2025_Final.pdf       | Bin [31m0[m -> [32m26659021[m bytes
+ Semester_03/Batch-26th_Spring-2025_Mid.pdf         | Bin [31m0[m -> [32m18079574[m bytes
+ Semester_03/Batch-27th_Fall-2025_Mid_&_Final.pdf   | Bin [31m0[m -> [32m8060091[m bytes
+ Semester_03/Batch-28th_Spring-2026_Mid.pdf.pdf     | Bin [31m0[m -> [32m4975830[m bytes
+ Semester_04/Batch-21st_Spring-2023_Mid_&_Final.pdf | Bin [31m0[m -> [32m3897515[m bytes
+ Semester_04/Batch-22nd_Fall-2023_Mid_&_Final.pdf   | Bin [31m0[m -> [32m12342214[m bytes
+ Semester_04/Batch-23rd_Spring-2024_Final.pdf       | Bin [31m0[m -> [32m10385444[m bytes
+ Semester_04/Batch-23rd_Spring-2024_Mid.pdf         | Bin [31m0[m -> [32m8728300[m bytes
+ Semester_04/Batch-24th_Fall-2024_Final.pdf         | Bin [31m0[m -> [32m3318793[m bytes
+ Semester_04/Batch-24th_Fall-2024_Mid.pdf           | Bin [31m0[m -> [32m4226805[m bytes
+ Semester_04/Batch-25th_Spring-2025_Final.pdf       | Bin [31m0[m -> [32m4773947[m bytes
+ Semester_04/Batch-25th_Spring-2025_Mid.pdf         | Bin [31m0[m -> [32m2239967[m bytes
+ Semester_04/Batch-26th_Fall-2025_Mid_&_Final.pdf   | Bin [31m0[m -> [32m9912857[m bytes
+ Semester_04/Batch-27_Spring-2026_Mid.pdf           | Bin [31m0[m -> [32m3660751[m bytes
+ Semester_05/Batch-21st_Fall-2023_Mid_&_Final.pdf   | Bin [31m0[m -> [32m4346057[m bytes
+ Semester_05/Batch-22nd_Spring-2024_Mid_&_Final.pdf | Bin [31m0[m -> [32m13432318[m bytes
+ Semester_05/Batch-23rd_Fall-2024_Final.pdf         | Bin [31m0[m -> [32m2276582[m bytes
+ Semester_05/Batch-23rd_Fall-2024_Mid.pdf           | Bin [31m0[m -> [32m1234333[m bytes
+ Semester_05/Batch-24th_Spring-2025_Final.pdf       | Bin [31m0[m -> [32m4508049[m bytes
+ Semester_05/Batch-24th_Spring-2025_Mid.pdf         | Bin [31m0[m -> [32m49697812[m bytes
+ Semester_05/Batch-25th_Fall-2025_Final.pdf         | Bin [31m0[m -> [32m6221006[m bytes
+ Semester_05/Batch-25th_Fall-2025_Mid.pdf           | Bin [31m0[m -> [32m2163303[m bytes
+ Semester_05/Batch-26th_Spring-2026_Mid.pdf         | Bin [31m0[m -> [32m4525375[m bytes
+ .../Oracle_Installation_Siam(315212019).pdf        | Bin [31m0[m -> [32m1929540[m bytes
+ Semester_05/Oracle_Installation_Video.docx         | Bin [31m0[m -> [32m6626[m bytes
+ Semester_06/Batch-18th_Fall-2022_Final.PDF         | Bin [31m0[m -> [32m2409540[m bytes
+ Semester_06/Batch-18th_Fall-2022_Mid.PDF           | Bin [31m0[m -> [32m2611718[m bytes
+ Semester_06/Batch-20th_Fall-2023_Mid_&_Final.pdf   | Bin [31m0[m -> [32m3325605[m bytes
+ Semester_06/Batch-21st_Spring-2024_Mid_&_Final.pdf | Bin [31m0[m -> [32m9429979[m bytes
+ Semester_06/Batch-22nd_Fall-2024_Final.pdf         | Bin [31m0[m -> [32m4331524[m bytes
+ Semester_06/Batch-22nd_Fall-2024_Mid.pdf           | Bin [31m0[m -> [32m6527684[m bytes
+ Semester_06/Batch-23rd_Spring-2025_Final.pdf       | Bin [31m0[m -> [32m4088115[m bytes
+ Semester_06/Batch-23rd_Spring-2025_Mid.pdf         | Bin [31m0[m -> [32m5416868[m bytes
+ Semester_06/Batch-24th_Fall-2025_Mid_&_Final.pdf   | Bin [31m0[m -> [32m832587[m bytes
+ Semester_06/Batch-25th_Fall-2026_Mid.pdf           | Bin [31m0[m -> [32m9836206[m bytes
+ Semester_07/Batch-18th_Spring-2023_Final.pdf       | Bin [31m0[m -> [32m3325676[m bytes
+ Semester_07/Batch-18th_Spring-2023_Mid.pdf         | Bin [31m0[m -> [32m3113710[m bytes
+ Semester_07/Batch-21st_Fall-2024_Final.pdf         | Bin [31m0[m -> [32m2687306[m bytes
+ Semester_07/Batch-21st_Fall-2024_Mid.pdf           | Bin [31m0[m -> [32m3467847[m bytes
+ Semester_07/Batch-22nd_Spring-2025_Final.pdf       | Bin [31m0[m -> [32m3943538[m bytes
+ Semester_07/Batch-22nd_Spring-2025_Mid.pdf         | Bin [31m0[m -> [32m5125744[m bytes
+ Semester_07/Batch-23rd_Fall-2025_Final.pdf         | Bin [31m0[m -> [32m462327[m bytes
+ Semester_07/Batch-23rd_Fall-2025_Mid.pdf           | Bin [31m0[m -> [32m482201[m bytes
+ Semester_07/Batch-24th_Spring-2026_Mid.pdf         | Bin [31m0[m -> [32m778428[m bytes
+ Semester_08/Batch-20th_Fall-2024_Mid_&_Final.pdf   | Bin [31m0[m -> [32m2858069[m bytes
+ Semester_08/Batch-21st_Spring-2025_Mid_&_Final.pdf | Bin [31m0[m -> [32m2851205[m bytes
+ Semester_08/Batch-22nd_Fall-2025_Final.pdf         | Bin [31m0[m -> [32m3486209[m bytes
+ Semester_08/Batch-22nd_Fall-2025_Mid.pdf           | Bin [31m0[m -> [32m3385767[m bytes
+ Semester_08/Batch-23th_Spring-2026_Mid.pdf         | Bin [31m0[m -> [32m749091[m bytes
+ index.html                                         |   5 [32m+[m[31m--[m
+ questionbank.css                                   |   2 [32m+[m[31m-[m
+ questionbank.js                                    |   4 [32m+[m[31m--[m
+ questionbank.json                                  |  38 [32m+++++++++++++++++++++[m
+ viewer.js                                          |   2 [32m+[m[31m-[m
+ 80 files changed, 48 insertions(+), 6 deletions(-)
+[33m664dedb[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update questionbank.css
+ questionbank.css | 4 [32m++[m[31m--[m
+ 1 file changed, 2 insertions(+), 2 deletions(-)

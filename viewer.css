@@ -1,171 +1,427 @@
 
+* {
+  box-sizing: border-box;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+html {
+  margin: 0;
+  padding: 0;
+  background: #f1f3f6;
+  scroll-behavior: smooth;
+}
 
-    body {
-      margin: 0;
-      background: #f1f3f6;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #111827;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  background: #f1f3f6;
+  color: #111827;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-    /* Header */
+  -webkit-text-size-adjust: 100%;
+}
 
-    .viewer-header {
-      position: sticky;
-      top: 0;
 
-      background: #0d1117;
-      color: white;
+/* =========================================
+   HEADER
+========================================= */
 
-      min-height: 60px;
-      padding: 10px 15px;
+.viewer-header {
+  position: sticky;
+  position: -webkit-sticky;
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  top: 0;
+  z-index: 1000;
 
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
+  width: 100%;
 
-    .viewer-title {
-      font-size: 15px;
-      font-weight: 700;
+  min-height: 60px;
 
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+  padding:
+    10px
+    max(12px, env(safe-area-inset-right))
+    10px
+    max(12px, env(safe-area-inset-left));
 
-      max-width: 75%;
-    }
+  background: #0d1117;
+  color: #ffffff;
 
-    .back-btn {
-      border: none;
-      background: rgba(64, 64, 184, 0.826);
-      color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-      padding: 9px 13px;
+  gap: 12px;
 
-      border-radius: 8px;
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.22);
+}
 
-      cursor: pointer;
 
-      font-weight: 600;
-    }
+/* =========================================
+   TITLE
+========================================= */
 
-    .back-btn:hover {
-      background: rgb(184, 13, 13);
-      color: black;
-      border-color: #cbd5e1;
-      transform: translateX(-3px);
-      box-shadow: var(--shadow-md);
-    }
+.viewer-title {
+  min-width: 0;
 
-    /* PDF container */
+  flex: 1;
 
-    #pdf-container {
+  font-size: 15px;
+  font-weight: 700;
 
-      width: 100%;
+  line-height: 1.35;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  overflow: hidden;
 
-      gap: 18px;
+  text-overflow: ellipsis;
 
-      padding: 20px 8px 40px;
-    }
+  white-space: nowrap;
+}
 
-    .pdf-page {
 
-      background: white;
+/* =========================================
+   BACK BUTTON
+========================================= */
 
-      box-shadow:
-        0 4px 18px rgba(0,0,0,0.15);
+.back-btn {
+  flex-shrink: 0;
 
-      max-width: 100%;
-    }
+  border: 0;
 
-    canvas {
+  background: #4040b8;
 
-      display: block;
+  color: #ffffff;
 
-      max-width: 100%;
-      height: auto;
-    }
+  min-height: 40px;
 
-    /* Loading */
+  padding:
+    9px
+    13px;
 
-    .loading {
+  border-radius: 8px;
 
-      margin-top: 60px;
+  cursor: pointer;
 
-      text-align: center;
+  font-size: 13px;
 
-      color: #64748b;
+  font-weight: 700;
 
-      font-size: 15px;
-    }
+  display: inline-flex;
 
-    .spinner {
+  align-items: center;
 
-      width: 35px;
-      height: 35px;
+  justify-content: center;
 
-      border: 4px solid #e5e7eb;
-      border-top: 4px solid #2563eb;
+  gap: 7px;
 
-      border-radius: 50%;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
 
-      animation: spin 0.8s linear infinite;
+.back-btn:hover {
+  background: #b80d0d;
 
-      margin: 0 auto 15px;
-    }
+  transform: translateX(-2px);
+}
 
-    @keyframes spin {
+.back-btn:active {
+  transform: scale(0.96);
+}
 
-      from {
-        transform: rotate(0deg);
-      }
+.back-btn:focus-visible {
+  outline:
+    3px solid rgba(96, 165, 250, 0.7);
 
-      to {
-        transform: rotate(360deg);
-      }
+  outline-offset: 2px;
+}
 
-    }
 
-    .error {
+/* =========================================
+   PDF CONTAINER
+========================================= */
 
-      margin-top: 60px;
+#pdf-container {
+  width: 100%;
 
-      text-align: center;
+  min-height:
+    calc(100vh - 60px);
 
-      color: #dc2626;
+  padding:
+    20px
+    8px
+    50px;
 
-      padding: 20px;
-    }
+  display: flex;
 
-    @media (max-width: 600px) {
+  flex-direction: column;
 
-      .viewer-header {
-        padding: 9px 10px;
-      }
+  align-items: center;
 
-      .viewer-title {
-        font-size: 13px;
-        max-width: 68%;
-      }
+  gap: 18px;
 
-      .back-btn {
-        padding: 8px 10px;
-        font-size: 12px;
-      }
+  overflow-x: hidden;
+}
 
-      #pdf-container {
-        padding: 10px 4px 30px;
-        gap: 12px;
-      }
 
-    }
+/* =========================================
+   PDF PAGE
+========================================= */
+
+.pdf-page {
+  width: fit-content;
+
+  max-width: 100%;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.15);
+
+  overflow: hidden;
+
+  border-radius: 2px;
+}
+
+
+/* =========================================
+   CANVAS
+========================================= */
+
+.pdf-page canvas {
+  display: block;
+
+  width: auto;
+
+  max-width: 100%;
+
+  height: auto;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.loading {
+  width: 100%;
+
+  margin-top: 70px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+.spinner {
+  width: 38px;
+  height: 38px;
+
+  border:
+    4px solid #e5e7eb;
+
+  border-top:
+    4px solid #2563eb;
+
+  border-radius: 50%;
+
+  animation:
+    spin 0.8s linear infinite;
+
+  margin:
+    0 auto 15px;
+}
+
+.loading-title {
+  font-weight: 700;
+
+  color: #475569;
+}
+
+.loading-subtitle {
+  margin-top: 5px;
+
+  font-size: 12px;
+
+  color: #94a3b8;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.error {
+  width: min(92%, 500px);
+
+  margin-top: 60px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.08);
+
+  color: #dc2626;
+}
+
+.error h3 {
+  margin:
+    20px 0 10px;
+
+  font-size: 18px;
+}
+
+.error p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.error-details {
+  margin-top: 15px;
+
+  padding: 10px;
+
+  background: #f8fafc;
+
+  border-radius: 8px;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  word-break: break-word;
+
+  text-align: left;
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .viewer-header {
+    min-height: 56px;
+
+    padding:
+      8px
+      10px;
+  }
+
+  .viewer-title {
+    font-size: 13px;
+
+    max-width: none;
+  }
+
+  .back-btn {
+    min-height: 38px;
+
+    padding:
+      8px
+      10px;
+
+    font-size: 12px;
+  }
+
+  .back-btn span {
+    display: none;
+  }
+
+  #pdf-container {
+    padding:
+      10px
+      0
+      30px;
+
+    gap: 12px;
+  }
+
+  .pdf-page {
+    width: 100%;
+
+    max-width: 100%;
+
+    border-radius: 0;
+
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+
+  .pdf-page canvas {
+    width: 100%;
+
+    max-width: 100%;
+
+    height: auto;
+  }
+
+  .loading {
+    margin-top: 50px;
+
+    padding:
+      0
+      15px;
+  }
+
+  .error {
+    margin-top: 40px;
+
+    padding: 20px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL DEVICES
+========================================= */
+
+@media (max-width: 360px) {
+
+  .viewer-title {
+    font-size: 12px;
+  }
+
+  .back-btn {
+    padding:
+      7px
+      9px;
+  }
+
+  #pdf-container {
+    gap: 8px;
+  }
+}

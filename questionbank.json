@@ -1,38 +1,334 @@
 {
-  "version": "1.0",
-  "lastUpdated": "2026-08-25",
-  "semesters": [
-    {
-      "name": "Semester_01",
-      "files": []
-    },
-    {
-      "name": "Semester_02",
-      "files": []
-    },
-    {
-      "name": "Semester_03",
-      "files": []
-    },
-    {
-      "name": "Semester_04",
-      "files": []
-    },
-    {
-      "name": "Semester_05",
-      "files": []
-    },
-    {
-      "name": "Semester_06",
-      "files": []
-    },
-    {
-      "name": "Semester_07",
-      "files": []
-    },
-    {
-      "name": "Semester_08",
-      "files": []
-    }
-  ]
+    "lastUpdated":  "2026-08-26",
+    "version":  "1.0",
+    "semesters":  [
+                      {
+                          "name":  "Semester_01",
+                          "files":  [
+                                        {
+                                            "name":  "Batch-25th_Fall-2023_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_01/Batch-25th_Fall-2023_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-26th_Spring-2024_Final.pdf",
+                                            "path":  "Semester_01/Batch-26th_Spring-2024_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-26th_Spring-2024_Mid.pdf",
+                                            "path":  "Semester_01/Batch-26th_Spring-2024_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-27th_Fall-2024_Final.pdf",
+                                            "path":  "Semester_01/Batch-27th_Fall-2024_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-27th_Fall-2024_Mid.pdf",
+                                            "path":  "Semester_01/Batch-27th_Fall-2024_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-28th_Spring-2025_Final.pdf",
+                                            "path":  "Semester_01/Batch-28th_Spring-2025_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-28th_Spring-2025_Mid.pdf",
+                                            "path":  "Semester_01/Batch-28th_Spring-2025_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-29th_Fall-2025_Final.pdf",
+                                            "path":  "Semester_01/Batch-29th_Fall-2025_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-29th_Fall-2025_Mid.pdf",
+                                            "path":  "Semester_01/Batch-29th_Fall-2025_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-30th_Spring-2026_Mid.pdf",
+                                            "path":  "Semester_01/Batch-30th_Spring-2026_Mid.pdf"
+                                        }
+                                    ]
+                      },
+                      {
+                          "name":  "Semester_02",
+                          "files":  [
+                                        {
+                                            "name":  "Batch-23rd_Spring-2023_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_02/Batch-23rd_Spring-2023_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-24th_Fall-2023_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_02/Batch-24th_Fall-2023_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-25th_Spring-2024_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_02/Batch-25th_Spring-2024_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-26_Fall-2024_Final.pdf",
+                                            "path":  "Semester_02/Batch-26_Fall-2024_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-26th_Fall-2024_Mid.pdf",
+                                            "path":  "Semester_02/Batch-26th_Fall-2024_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-27th_Spring-2025_Final.pdf",
+                                            "path":  "Semester_02/Batch-27th_Spring-2025_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-27th_Spring-2025_Mid.pdf",
+                                            "path":  "Semester_02/Batch-27th_Spring-2025_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-28th_Fall-2025_Final.pdf",
+                                            "path":  "Semester_02/Batch-28th_Fall-2025_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-28th_Fall-2025_Mid.pdf",
+                                            "path":  "Semester_02/Batch-28th_Fall-2025_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-29th_Spring-2026_Mid.pdf",
+                                            "path":  "Semester_02/Batch-29th_Spring-2026_Mid.pdf"
+                                        }
+                                    ]
+                      },
+                      {
+                          "name":  "Semester_03",
+                          "files":  [
+                                        {
+                                            "name":  "Batch-23rd_Fall-2023_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_03/Batch-23rd_Fall-2023_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-24th_Spring-2024_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_03/Batch-24th_Spring-2024_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-25th_Fall-2024_Final.pdf",
+                                            "path":  "Semester_03/Batch-25th_Fall-2024_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-25th_Fall-2024_Mid.pdf",
+                                            "path":  "Semester_03/Batch-25th_Fall-2024_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-26th_Spring-2025_Final.pdf",
+                                            "path":  "Semester_03/Batch-26th_Spring-2025_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-26th_Spring-2025_Mid.pdf",
+                                            "path":  "Semester_03/Batch-26th_Spring-2025_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-27th_Fall-2025_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_03/Batch-27th_Fall-2025_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-28th_Spring-2026_Mid.pdf.pdf",
+                                            "path":  "Semester_03/Batch-28th_Spring-2026_Mid.pdf.pdf"
+                                        }
+                                    ]
+                      },
+                      {
+                          "name":  "Semester_04",
+                          "files":  [
+                                        {
+                                            "name":  "Batch-21st_Spring-2023_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_04/Batch-21st_Spring-2023_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-22nd_Fall-2023_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_04/Batch-22nd_Fall-2023_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-23rd_Spring-2024_Final.pdf",
+                                            "path":  "Semester_04/Batch-23rd_Spring-2024_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-23rd_Spring-2024_Mid.pdf",
+                                            "path":  "Semester_04/Batch-23rd_Spring-2024_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-24th_Fall-2024_Final.pdf",
+                                            "path":  "Semester_04/Batch-24th_Fall-2024_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-24th_Fall-2024_Mid.pdf",
+                                            "path":  "Semester_04/Batch-24th_Fall-2024_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-25th_Spring-2025_Final.pdf",
+                                            "path":  "Semester_04/Batch-25th_Spring-2025_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-25th_Spring-2025_Mid.pdf",
+                                            "path":  "Semester_04/Batch-25th_Spring-2025_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-26th_Fall-2025_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_04/Batch-26th_Fall-2025_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-27_Spring-2026_Mid.pdf",
+                                            "path":  "Semester_04/Batch-27_Spring-2026_Mid.pdf"
+                                        }
+                                    ]
+                      },
+                      {
+                          "name":  "Semester_05",
+                          "files":  [
+                                        {
+                                            "name":  "Batch-21st_Fall-2023_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_05/Batch-21st_Fall-2023_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-22nd_Spring-2024_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_05/Batch-22nd_Spring-2024_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-23rd_Fall-2024_Final.pdf",
+                                            "path":  "Semester_05/Batch-23rd_Fall-2024_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-23rd_Fall-2024_Mid.pdf",
+                                            "path":  "Semester_05/Batch-23rd_Fall-2024_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-24th_Spring-2025_Final.pdf",
+                                            "path":  "Semester_05/Batch-24th_Spring-2025_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-24th_Spring-2025_Mid.pdf",
+                                            "path":  "Semester_05/Batch-24th_Spring-2025_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-25th_Fall-2025_Final.pdf",
+                                            "path":  "Semester_05/Batch-25th_Fall-2025_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-25th_Fall-2025_Mid.pdf",
+                                            "path":  "Semester_05/Batch-25th_Fall-2025_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-26th_Spring-2026_Mid.pdf",
+                                            "path":  "Semester_05/Batch-26th_Spring-2026_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Oracle_Installation_Siam(315212019).pdf",
+                                            "path":  "Semester_05/Oracle_Installation_Siam(315212019).pdf"
+                                        }
+                                    ]
+                      },
+                      {
+                          "name":  "Semester_06",
+                          "files":  [
+                                        {
+                                            "name":  "Batch-18th_Fall-2022_Final.PDF",
+                                            "path":  "Semester_06/Batch-18th_Fall-2022_Final.PDF"
+                                        },
+                                        {
+                                            "name":  "Batch-18th_Fall-2022_Mid.PDF",
+                                            "path":  "Semester_06/Batch-18th_Fall-2022_Mid.PDF"
+                                        },
+                                        {
+                                            "name":  "Batch-20th_Fall-2023_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_06/Batch-20th_Fall-2023_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-21st_Spring-2024_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_06/Batch-21st_Spring-2024_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-22nd_Fall-2024_Final.pdf",
+                                            "path":  "Semester_06/Batch-22nd_Fall-2024_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-22nd_Fall-2024_Mid.pdf",
+                                            "path":  "Semester_06/Batch-22nd_Fall-2024_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-23rd_Spring-2025_Final.pdf",
+                                            "path":  "Semester_06/Batch-23rd_Spring-2025_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-23rd_Spring-2025_Mid.pdf",
+                                            "path":  "Semester_06/Batch-23rd_Spring-2025_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-24th_Fall-2025_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_06/Batch-24th_Fall-2025_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-25th_Fall-2026_Mid.pdf",
+                                            "path":  "Semester_06/Batch-25th_Fall-2026_Mid.pdf"
+                                        }
+                                    ]
+                      },
+                      {
+                          "name":  "Semester_07",
+                          "files":  [
+                                        {
+                                            "name":  "Batch-18th_Spring-2023_Final.pdf",
+                                            "path":  "Semester_07/Batch-18th_Spring-2023_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-18th_Spring-2023_Mid.pdf",
+                                            "path":  "Semester_07/Batch-18th_Spring-2023_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-21st_Fall-2024_Final.pdf",
+                                            "path":  "Semester_07/Batch-21st_Fall-2024_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-21st_Fall-2024_Mid.pdf",
+                                            "path":  "Semester_07/Batch-21st_Fall-2024_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-22nd_Spring-2025_Final.pdf",
+                                            "path":  "Semester_07/Batch-22nd_Spring-2025_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-22nd_Spring-2025_Mid.pdf",
+                                            "path":  "Semester_07/Batch-22nd_Spring-2025_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-23rd_Fall-2025_Final.pdf",
+                                            "path":  "Semester_07/Batch-23rd_Fall-2025_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-23rd_Fall-2025_Mid.pdf",
+                                            "path":  "Semester_07/Batch-23rd_Fall-2025_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-24th_Spring-2026_Mid.pdf",
+                                            "path":  "Semester_07/Batch-24th_Spring-2026_Mid.pdf"
+                                        }
+                                    ]
+                      },
+                      {
+                          "name":  "Semester_08",
+                          "files":  [
+                                        {
+                                            "name":  "Batch-20th_Fall-2024_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_08/Batch-20th_Fall-2024_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-21st_Spring-2025_Mid_\u0026_Final.pdf",
+                                            "path":  "Semester_08/Batch-21st_Spring-2025_Mid_\u0026_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-22nd_Fall-2025_Final.pdf",
+                                            "path":  "Semester_08/Batch-22nd_Fall-2025_Final.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-22nd_Fall-2025_Mid.pdf",
+                                            "path":  "Semester_08/Batch-22nd_Fall-2025_Mid.pdf"
+                                        },
+                                        {
+                                            "name":  "Batch-23th_Spring-2026_Mid.pdf",
+                                            "path":  "Semester_08/Batch-23th_Spring-2026_Mid.pdf"
+                                        }
+                                    ]
+                      }
+                  ]
 }
