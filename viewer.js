@@ -66,18 +66,15 @@ if (title) {
 
 function goHome() {
 
-  window.location.href =
-    "index.html";
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    window.location.href = "index.html";
+  }
 
 }
 
-backBtn.addEventListener(
-  "click",
-  goHome
-);
-
-window.goHome =
-  goHome;
+window.goHome = goHome;
 
 
 // =====================================================
