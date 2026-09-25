@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CSE Question Bank - Admin Panel</title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="background">
+
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="orb orb-three"></div>
+
+    </div>
+
+
+    <!-- =========================================
+         LOGIN SCREEN
+    ========================================== -->
+
+    <section
+        id="loginScreen"
+        class="login-screen"
+    >
+
+        <div class="login-card">
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Home
+
+            </a>
+
+
+            <div class="admin-icon">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+            </div>
+
+
+            <span class="login-badge">
+                ADMIN CONTROL
+            </span>
+
+
+            <h1>
+                Admin Access
+            </h1>
+
+
+            <p class="login-description">
+
+                Secure administrator verification
+                required to access the question bank
+                moderation panel.
+
+            </p>
+
+
+            <form id="adminLoginForm">
+
+                <div class="input-group">
+
+                    <label for="adminPassword">
+                        Admin Pass Key
+                    </label>
+
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            placeholder="Enter admin pass key"
+                            autocomplete="off"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="password-toggle"
+                        >
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    id="loginButton"
+                    class="login-button"
+                >
+
+                    <span id="loginNormal">
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                        Verify Admin
+
+                    </span>
+
+
+                    <span
+                        id="loginLoading"
+                        class="hidden"
+                    >
+
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+
+                        Verifying...
+
+                    </span>
+
+                </button>
+
+
+                <div
+                    id="loginMessage"
+                    class="login-message hidden"
+                ></div>
+
+            </form>
+
+
+            <div class="security-note">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <span>
+                    Protected administrator area
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ADMIN DASHBOARD
+    ========================================== -->
+
+    <main
+        id="dashboard"
+        class="dashboard hidden"
+    >
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <header class="dashboard-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span class="brand-label">
+                        CSE QUESTION BANK
+                    </span>
+
+                    <h1>
+                        Admin Dashboard
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button
+                    id="refreshButton"
+                    class="header-button"
+                >
+
+                    <i class="fa-solid fa-rotate"></i>
+
+                    Refresh
+
+                </button>
+
+
+                <button
+                    id="logoutButton"
+                    class="logout-button"
+                >
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================
+             STAT CARDS
+        ====================================== -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon pending-icon">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        Pending Reviews
+                    </span>
+
+                    <strong id="pendingCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon paper-icon">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        Current Requests
+                    </span>
+
+                    <strong id="requestCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon admin-icon-small">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                </div>
+
+
+                <div class="stat-info">
+
+                    <span>
+                        Access Level
+                    </span>
+
+                    <strong>
+                        ADMIN
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             MODERATION QUEUE
+        ====================================== -->
+
+        <section class="content-card">
+
+            <div class="content-header">
+
+                <div>
+
+                    <span class="section-label">
+                        MODERATION QUEUE
+                    </span>
+
+                    <h2>
+                        Pending Question Papers
+                    </h2>
+
+                    <p>
+                        Review submitted papers before
+                        publishing them to the question bank.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="lastUpdated"
+                    class="last-updated"
+                >
+                    Not loaded yet
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 LOADING
+            ================================== -->
+
+            <div
+                id="loadingState"
+                class="loading-state"
+            >
+
+                <div class="loading-spinner">
+
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+
+                </div>
+
+                <h3>
+                    Loading requests...
+                </h3>
+
+                <p>
+                    Connecting to admin service
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 EMPTY
+            ================================== -->
+
+            <div
+                id="emptyState"
+                class="empty-state hidden"
+            >
+
+                <div class="empty-icon">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <h3>
+                    No Pending Papers
+                </h3>
+
+                <p>
+                    All submitted question papers
+                    have been reviewed.
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 REQUEST LIST
+            ================================== -->
+
+            <div
+                id="requestList"
+                class="request-list hidden"
+            ></div>
+
+        </section>
+
+
+        <!-- =====================================
+             PUBLISHED QUESTION BANK MANAGEMENT
+        ====================================== -->
+
+        <section
+            id="publishedBankSection"
+            class="content-card published-bank-section"
+        >
+
+
+            <!-- =================================
+                 PUBLISHED HEADER
+            ================================== -->
+
+            <div class="content-header">
+
+                <div>
+
+                    <span class="section-label">
+                        QUESTION BANK MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Published Question Papers
+                    </h2>
+
+                    <p>
+                        Manage question papers that are
+                        already published in the Question Bank.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="refreshPublishedButton"
+                    class="header-button"
+                >
+
+                    <i class="fa-solid fa-rotate"></i>
+
+                    Refresh
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 PUBLISHED LOADING
+            ================================== -->
+
+            <div
+                id="publishedLoadingState"
+                class="loading-state hidden"
+            >
+
+                <div class="loading-spinner">
+
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+
+                </div>
+
+                <h3>
+                    Loading published papers...
+                </h3>
+
+                <p>
+                    Reading the current Question Bank
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 PUBLISHED EMPTY
+            ================================== -->
+
+            <div
+                id="publishedEmptyState"
+                class="empty-state hidden"
+            >
+
+                <div class="empty-icon">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                </div>
+
+                <h3>
+                    No Published Papers
+                </h3>
+
+                <p>
+                    There are currently no published
+                    question papers in the Question Bank.
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 PUBLISHED LIST
+            ================================== -->
+
+            <div
+                id="publishedBankList"
+                class="published-bank-list"
+            ></div>
+
+
+        </section>
+
+
+        <!-- =====================================
+             PDF PREVIEW MODAL
+        ====================================== -->
+
+        <div
+            id="previewModal"
+            class="modal hidden"
+        >
+
+            <div class="modal-overlay"></div>
+
+
+            <div class="preview-modal">
+
+                <div class="modal-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            DOCUMENT PREVIEW
+                        </span>
+
+                        <h2 id="previewTitle">
+                            Question Paper
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        id="closePreview"
+                        class="close-button"
+                    >
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="previewInfo"
+                    class="preview-info-bar"
+                ></div>
+
+
+                <div class="pdf-viewer">
+
+                    <iframe
+                        id="pdfFrame"
+                        title="Question Paper Preview"
+                    ></iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             CONFIRM MODAL
+        ====================================== -->
+
+        <div
+            id="confirmModal"
+            class="modal hidden"
+        >
+
+            <div class="modal-overlay"></div>
+
+
+            <div class="confirm-card">
+
+                <div
+                    id="confirmIcon"
+                    class="confirm-icon"
+                >
+
+                    <i class="fa-solid fa-circle-question"></i>
+
+                </div>
+
+
+                <h2 id="confirmTitle">
+                    Confirm Action
+                </h2>
+
+
+                <p id="confirmText">
+                    Are you sure?
+                </p>
+
+
+                <div class="confirm-actions">
+
+                    <button
+                        id="cancelAction"
+                        class="cancel-button"
+                    >
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        id="confirmAction"
+                        class="confirm-button"
+                    >
+
+                        Confirm
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             TOAST
+        ====================================== -->
+
+        <div
+            id="toast"
+            class="toast hidden"
+        >
+
+            <i
+                id="toastIcon"
+                class="fa-solid fa-circle-check"
+            ></i>
+
+            <span id="toastText">
+                Success
+            </span>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

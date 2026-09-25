@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Upload Access</title>
+    
+    <!-- CSS Linkage -->
+    <link rel="stylesheet" href="passMsCr.css">
+    
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+<body>
+
+    <!-- Simulated Security Blackout / Lockdown Screen -->
+    <div class="blackout-screen" id="blackoutScreen">
+        <div class="crash-glitch">
+            <div class="glitch-symbol">!</div>
+            <div class="crash-title">SECURITY VIOLATION</div>
+            <div class="crash-text">UNAUTHORIZED ACCESS ATTEMPT DETECTED</div>
+            <div class="crash-progress">
+                <span id="crashProgress"></span>
+            </div>
+            <div class="crash-timer" id="crashTimer">SYSTEM LOCKDOWN: 5</div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="verification-wrapper">
+
+        <!-- Verification Card -->
+        <div class="verification-card" id="verificationCard">
+
+            <!-- Hacker Identity -->
+            <div class="hacker-avatar" id="hackerAvatar">
+                <div class="avatar-glow"></div>
+                <i class="fa-solid fa-user-secret"></i>
+            </div>
+
+            <div class="hacker-status" id="hackerStatus">
+                <span class="status-dot"></span>
+                <span id="statusText">BLACK HAT DETECTED</span>
+            </div>
+
+            <!-- Header -->
+            <div class="verification-header">
+                <span class="eyebrow">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Restricted Access
+                </span>
+                <h1>Secure Upload Portal</h1>
+                <p>
+                    Enter the secret pass key to access the question paper upload portal.
+                </p>
+            </div>
+
+            <!-- Verification Form -->
+            <form id="passwordForm">
+                <div class="input-label">
+                    <label for="secretPass">Secret Pass Key</label>
+                </div>
+
+                <div class="password-box">
+                    <i class="fa-solid fa-key key-icon"></i>
+                    <input
+                        type="password"
+                        id="secretPass"
+                        placeholder="Enter secret pass key"
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+                    <button
+                        type="button"
+                        id="togglePassword"
+                        class="toggle-password"
+                        aria-label="Toggle Password Visibility"
+                    >
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+
+                <!-- Error Alert Box -->
+                <div class="error-message" id="errorMessage">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <div>
+                        <strong>ACCESS DENIED</strong>
+                        <span id="errorText">Incorrect secret pass key.</span>
+                    </div>
+                </div>
+
+                <!-- Verify Button -->
+                <button type="submit" class="verify-btn" id="verifyBtn">
+                    <span class="btn-content">
+                        <i class="fa-solid fa-unlock-keyhole"></i>
+                        Verify Access
+                    </span>
+                    <span class="loading-content">
+                        <i class="fa-solid fa-circle-notch fa-spin"></i>
+                        Verifying...
+                    </span>
+                </button>
+            </form>
+
+            <!-- Admin Contact Information -->
+            <div class="admin-message">
+                <div class="admin-message-icon">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <div>
+                    <span class="admin-title">Don't have the pass key?</span>
+                    <span class="admin-text">
+                        Contact your admin to access the upload portal.
+                    </span>
+                </div>
+            </div>
+
+            <!-- Back Navigation Button -->
+            <button class="back-btn" id="backBtn">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Question Bank
+            </button>
+
+        </div>
+
+        <!-- Success Feedback Card -->
+        <div class="success-card" id="successCard">
+            <div class="success-avatar">
+                <i class="fa-solid fa-user-secret"></i>
+            </div>
+            <div class="ethical-badge">
+                <i class="fa-solid fa-circle-check"></i>
+                ETHICAL VERIFIED
+            </div>
+            <h2>Access Granted</h2>
+            <p>
+                Authentication successful.<br>
+                Welcome to the secure upload portal.
+            </p>
+            <div class="success-loader">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- JavaScript Linkage -->
+    <script src="passMsCr.js"></script>
+</body>
+</html>

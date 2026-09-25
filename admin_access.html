@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Access Verification</title>
+
+    <link
+        rel="stylesheet"
+        href="admin_access.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="background">
+
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="orb orb-three"></div>
+
+    </div>
+
+
+    <main class="access-page">
+
+        <section class="access-card">
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Home
+
+            </a>
+
+
+            <div class="security-icon">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+
+            <span class="access-badge">
+                RESTRICTED AREA
+            </span>
+
+
+            <h1>
+                Admin Verification
+            </h1>
+
+
+            <p class="description">
+                Enter the administrator secret pass key
+                to continue to the control panel.
+            </p>
+
+
+            <form id="adminAccessForm">
+
+                <div class="input-group">
+
+                    <label for="adminPass">
+                        Secret Pass Key
+                    </label>
+
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="adminPass"
+                            placeholder="Enter secret pass key"
+                            autocomplete="off"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="toggle-password"
+                        >
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    id="verifyButton"
+                    class="verify-button"
+                >
+
+                    <span id="normalState">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        Verify Access
+
+                    </span>
+
+
+                    <span
+                        id="loadingState"
+                        class="hidden"
+                    >
+
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+
+                        Verifying...
+
+                    </span>
+
+                </button>
+
+
+                <div
+                    id="errorMessage"
+                    class="error-message hidden"
+                ></div>
+
+            </form>
+
+
+            <div class="security-note">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <span>
+                    Administrator access is protected
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="admin_access.js?v=3"></script>
+
+</body>
+
+</html>

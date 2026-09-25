@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question Bank - CSE HUB</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="questionbank.css">
+  
+  <!-- Custom JS Logic -->
+  <script src="questionbank.js" defer></script>
+</head>
+
+<body>
+
+  <div class="app-layout">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="left-column">
+      <div class="brand-top">
+        <i class="fa-solid fa-book-open department-logo"></i>
+        <span class="logo">CSE QB</span>
+      </div>
+
+      <div class="sidebar">
+        <nav class="sidebar-nav">
+          <button class="nav-btn" title="Menu" type="button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <button class="nav-btn active" title="Home" onclick="goHome()" type="button">
+            <i class="fa-solid fa-house"></i>
+          </button>
+
+          <a href="passMsCr.html" class="nav-btn-link" title="Upload Question">
+            <button class="nav-btn" type="button">
+              <i class="fa-solid fa-upload"></i>
+            </button>
+          </a>
+
+          <a href="admin_access.html" class="nav-btn-link" title="Admin Access">
+            <button class="nav-btn" type="button">
+              <i class="fa-solid fa-user-shield"></i>
+            </button>
+          </a>
+        </nav>
+
+        <button class="nav-btn back-btn-nav" title="Back" onclick="goHome()" type="button">
+          BACK
+        </button>
+      </div>
+    </aside>
+
+    <!-- CENTER MAIN CONTENT -->
+    <div class="main-wrapper">
+      
+      <header>
+        <h1>Question Bank</h1>
+        <h2>Department Of Computer Science & Engineering</h2>
+        <p>Hamdard University Bangladesh</p>
+      </header>
+
+      <main class="container">
+        
+        <div class="search-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input
+            id="search"
+            class="search"
+            type="search"
+            placeholder="Search semester or course code..."
+            autocomplete="off"
+          >
+        </div>
+
+        <div id="status" class="status">
+          <div class="spinner"></div>
+          <span>Loading question bank...</span>
+        </div>
+        
+        <div id="app"></div>
+
+      </main>
+
+      <footer>
+        @ Question Bank | CSE, HUB | Maintained for Students | Developed by CSE Student Community
+      </footer>
+
+    </div>
+
+    <!-- RIGHT CAMPUS PANEL -->
+    <aside class="campus-panel">
+      <div class="campus-card">
+        <img src="download.png" alt="Campus image">
+      </div>
+    </aside>
+
+  </div>
+
+</body>
+</html>

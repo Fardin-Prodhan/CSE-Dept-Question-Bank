@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CSE Question Bank - CR Scanner</title>
+
+    <link
+        rel="stylesheet"
+        href="upload.css"
+    >
+
+    <script src="jspdf.umd.min.js"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="page">
+
+        <section class="upload-card">
+
+
+            <!-- BACK -->
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+                ← Back to Home
+            </a>
+
+
+            <!-- HEADER -->
+
+            <div class="card-header">
+
+                <span class="badge">
+                    CR PORTAL
+                </span>
+
+                <h1>
+                    Scan Question Paper
+                </h1>
+
+                <p>
+                    Enter the paper information correctly and
+                    submit the complete question paper for admin review.
+                </p>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form id="uploadForm">
+
+
+                <!-- CR ID -->
+
+                <div class="form-group">
+
+                    <label for="crId">
+                        CR ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="crId"
+                        name="cr_id"
+                        placeholder="Enter your CR ID"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CR NAME -->
+
+                <div class="form-group">
+
+                    <label for="crName">
+                        CR Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="crName"
+                        name="cr_name"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- WHATSAPP -->
+
+                <div class="form-group">
+
+                    <label for="whatsappNumber">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        CR WhatsApp Number
+
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="whatsappNumber"
+                        name="whatsapp_number"
+                        placeholder="01XXXXXXXXX"
+                        inputmode="tel"
+                        autocomplete="tel"
+                        maxlength="14"
+                        required
+                    >
+
+                    <small class="input-hint">
+                        This number will be used to contact you about your submission.
+                    </small>
+
+                </div>
+
+
+                <!-- ACADEMIC INFORMATION -->
+
+                <div class="scanner-section">
+
+                    <div class="scanner-header">
+
+                        <div>
+
+                            <label>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                Question Paper Information
+                            </label>
+
+                            <p>
+                                Enter the information exactly as shown for your batch.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BATCH -->
+
+                    <div class="form-group">
+
+                        <label for="batchNo">
+                            Batch No
+                        </label>
+
+                        <input
+                            type="text"
+                            id="batchNo"
+                            name="batch_no"
+                            placeholder="Example: 26"
+                            autocomplete="off"
+                            required
+                        >
+
+                        <small class="input-hint">
+                            Enter only your batch number.
+                        </small>
+
+                    </div>
+
+
+                    <!-- SESSION -->
+
+                    <div class="form-group">
+
+                        <label for="sessionName">
+                            Session
+                        </label>
+
+                        <input
+                            type="text"
+                            id="sessionName"
+                            name="session"
+                            placeholder="Example: Fall"
+                            autocomplete="off"
+                            required
+                        >
+
+                        <small class="input-hint">
+                            Example: Spring or Fall
+                        </small>
+
+                    </div>
+
+
+                    <!-- YEAR -->
+
+                    <div class="form-group">
+
+                        <label for="yearNo">
+                            Academic Year
+                        </label>
+
+                        <input
+                            type="text"
+                            id="yearNo"
+                            name="year"
+                            placeholder="Example: 2024"
+                            inputmode="numeric"
+                            maxlength="4"
+                            autocomplete="off"
+                            required
+                        >
+
+                        <small class="input-hint">
+                            Example: 2024
+                        </small>
+
+                    </div>
+
+
+                    <!-- EXAM -->
+
+                    <div class="form-group">
+
+                        <label for="examName">
+                            Examination
+                        </label>
+
+                        <input
+                            type="text"
+                            id="examName"
+                            name="exam"
+                            placeholder="Example: Mid"
+                            autocomplete="off"
+                            required
+                        >
+
+                        <small class="input-hint">
+                            Example: Mid or Final
+                        </small>
+
+                    </div>
+
+
+                    <!-- SEMESTER -->
+
+                    <div class="form-group">
+
+                        <label for="semesterNo">
+                            Semester No
+                        </label>
+
+                        <input
+                            type="text"
+                            id="semesterNo"
+                            name="semester_no"
+                            placeholder="Example: 02"
+                            inputmode="numeric"
+                            maxlength="2"
+                            autocomplete="off"
+                            required
+                        >
+
+                        <small class="input-hint">
+                            Example: 01, 02, 03 ... 08
+                        </small>
+
+                    </div>
+
+
+                    <!-- GENERATED PATH PREVIEW -->
+
+                    <div
+                        id="generatedPathPreview"
+                        class="generated-path-preview hidden"
+                    >
+
+                        <div class="generated-path-header">
+
+                            <i class="fa-solid fa-code"></i>
+
+                            <strong>
+                                System Generated File
+                            </strong>
+
+                        </div>
+
+
+                        <div class="generated-path-item">
+
+                            <span>
+                                Filename
+                            </span>
+
+                            <code id="generatedFilename">
+                                -
+                            </code>
+
+                        </div>
+
+
+                        <div class="generated-path-item">
+
+                            <span>
+                                GitHub Path
+                            </span>
+
+                            <code id="generatedPath">
+                                -
+                            </code>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PDF UPLOAD -->
+
+                <div class="scanner-section">
+
+                    <div class="scanner-header">
+
+                        <div>
+
+                            <label>
+
+                                <i class="fa-solid fa-file-pdf"></i>
+
+                                Question Paper
+
+                            </label>
+
+                            <p>
+                                Upload the complete question paper.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="fileUploadButton"
+                        class="file-upload-button"
+                    >
+
+                        <span class="file-upload-icon">
+
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                        </span>
+
+
+                        <span class="file-upload-content">
+
+                            <strong>
+                                Upload Question Paper
+                            </strong>
+
+                            <small>
+                                PDF format only
+                            </small>
+
+                        </span>
+
+                    </button>
+
+
+                    <input
+                        type="file"
+                        id="pdfFileInput"
+                        accept="application/pdf"
+                        hidden
+                    >
+
+
+                    <!-- SIZE CAUTION -->
+
+                    <div class="upload-caution">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        <span>
+                            Maximum file size:
+                            <strong>15 MB</strong>
+                        </span>
+
+                    </div>
+
+
+                    <!-- PDF PREVIEW -->
+
+                    <div
+                        id="pdfPreview"
+                        class="pdf-preview hidden"
+                    >
+
+                        <div class="preview-icon">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </div>
+
+
+                        <div class="preview-info">
+
+                            <strong>
+                                Question Paper Ready
+                            </strong>
+
+                            <span id="pdfInfo">
+                                0 MB
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    id="uploadButton"
+                    disabled
+                >
+
+                    Submit for Review
+
+                </button>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="message"
+                    class="message hidden"
+                ></div>
+
+
+            </form>
+
+
+            <!-- NOTICE -->
+
+            <div class="notice">
+
+                <strong>
+                    Important
+                </strong>
+
+                <p>
+                    Make sure every question is clearly visible.
+                    Your scanned paper will be reviewed manually
+                    by the administrator before publication.
+                </p>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="upload.js"></script>
+
+</body>
+
+</html>

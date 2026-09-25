@@ -1,0 +1,14 @@
+name = "cse-question-bank-api"
+main = "worker.js"
+compatibility_date = "2026-09-16"
+
+[vars]
+GITHUB_OWNER = "Fardin-Prodhan"
+GITHUB_REPO = "CSE-Dept-Question-Bank"
+GITHUB_BRANCH = "main"
+GITHUB_JSON_PATH = "questionbank.json"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "cse-question-bank-db"
+database_id = "e8ef64b4-f3a8-4bfa-b7de-b3693a7c8cb9"
